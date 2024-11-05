@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebVC" customModule="In_Memory_Of" customModuleProvider="target">
+            <connections>
+                <outlet property="btnBack" destination="OF1-ig-kdo" id="EYm-eh-9X8"/>
+                <outlet property="lblTitle" destination="5H7-jd-SiJ" id="Rx0-H0-iPh"/>
+                <outlet property="navView" destination="p67-al-15s" id="BAT-5w-FPA"/>
+                <outlet property="navViewContainer" destination="ImM-tD-Nra" id="ZsX-sa-1Ya"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="KuM-2i-tBM" id="jHe-9s-qi2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <wkWebView clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KuM-2i-tBM">
+                    <rect key="frame" x="0.0" y="108" width="414" height="754"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ImM-tD-Nra">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p67-al-15s">
+                            <rect key="frame" x="0.0" y="48" width="414" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETTINGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5H7-jd-SiJ">
+                                    <rect key="frame" x="60" y="0.0" width="344" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="V8Y-gI-UkT"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="27"/>
+                                    <color key="textColor" name="DoubleLightBlue"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OF1-ig-kdo">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="8cc-fI-VRR"/>
+                                        <constraint firstAttribute="height" constant="50" id="WlX-rg-BAv"/>
+                                    </constraints>
+                                    <color key="tintColor" name="DoubleLightBlue"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="chevron.left" catalog="system">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="bold">
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                        </preferredSymbolConfiguration>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnBackAction:" destination="-1" eventType="touchUpInside" id="7dR-nn-uAh"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="OF1-ig-kdo" secondAttribute="bottom" id="4IQ-L9-fUu"/>
+                                <constraint firstAttribute="bottom" secondItem="5H7-jd-SiJ" secondAttribute="bottom" id="6vb-5S-dZJ"/>
+                                <constraint firstAttribute="trailing" secondItem="5H7-jd-SiJ" secondAttribute="trailing" constant="10" id="RDv-ZL-etT"/>
+                                <constraint firstItem="5H7-jd-SiJ" firstAttribute="centerY" secondItem="OF1-ig-kdo" secondAttribute="centerY" id="UrY-ys-JwS"/>
+                                <constraint firstItem="OF1-ig-kdo" firstAttribute="top" secondItem="p67-al-15s" secondAttribute="top" id="uMp-34-1dM"/>
+                                <constraint firstItem="5H7-jd-SiJ" firstAttribute="leading" secondItem="OF1-ig-kdo" secondAttribute="trailing" id="vZU-3J-tfY"/>
+                                <constraint firstItem="OF1-ig-kdo" firstAttribute="leading" secondItem="p67-al-15s" secondAttribute="leading" id="yOe-wI-2du"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="DarkBlue"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="p67-al-15s" secondAttribute="trailing" id="HGK-aW-S0a"/>
+                        <constraint firstItem="p67-al-15s" firstAttribute="leading" secondItem="ImM-tD-Nra" secondAttribute="leading" id="y5u-oH-cye"/>
+                        <constraint firstAttribute="bottom" secondItem="p67-al-15s" secondAttribute="bottom" constant="10" id="zrt-mX-Gf7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="KuM-2i-tBM" firstAttribute="top" secondItem="ImM-tD-Nra" secondAttribute="bottom" id="FqI-WV-Hat"/>
+                <constraint firstItem="ImM-tD-Nra" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Pbz-YH-zbL"/>
+                <constraint firstItem="p67-al-15s" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Xuc-ty-8zh"/>
+                <constraint firstItem="ImM-tD-Nra" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Yl0-Ro-r1X"/>
+                <constraint firstItem="KuM-2i-tBM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cWQ-Td-ggi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KuM-2i-tBM" secondAttribute="bottom" id="emC-ad-ULd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ImM-tD-Nra" secondAttribute="trailing" id="igI-wf-9vv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KuM-2i-tBM" secondAttribute="trailing" id="qt8-Wk-Nfg"/>
+            </constraints>
+            <point key="canvasLocation" x="124.6376811594203" y="19.419642857142858"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <namedColor name="DarkBlue">
+            <color red="0.49019607843137253" green="0.58431372549019611" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DoubleLightBlue">
+            <color red="0.85882352941176465" green="0.92156862745098034" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
